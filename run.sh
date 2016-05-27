@@ -6,4 +6,3 @@ ID=$(docker build  -t test_git  .  | tail -1 | sed 's/.*Successfully built \(.*\
 docker tag ${ID} ${IMAGE}:${VERSION}
 docker tag ${ID} ${IMAGE}:latest
 docker push ${IMAGE}:${VERSION}
-docker push ${IMAGE}:latest
